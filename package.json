@@ -4,16 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "json-server": "json-server --watch db.json --port 5000",
     "build": "next build",
     "start": "next start",
-    "json-server": "json-server --watch db.json --port 5000",
     "lint": "next lint"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "@swc/helpers": "^0.5.1",
     "antd": "^5.6.1",
     "eslint": "8.42.0",
-    "eslint-config-next": "13.4.5",
+    "eslint-config-next": "^13.4.12",
     "json-server": "^0.17.3",
     "mongodb": "4.1",
     "next": "13.4.5",

@@ -15,7 +15,7 @@ const { Meta } = Card;
 
 
 const Newses = ({ allNews}) => {
-  console.log(allNews);
+  // console.log(allNews);
 
   return (
     <div>
