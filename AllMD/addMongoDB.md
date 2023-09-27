@@ -4,6 +4,7 @@
 
 ### src>pages>api>news.js :::
 
+```js
     const { MongoClient, ServerApiVersion } = require("mongodb");
     const uri = process.env.DB_URL;
     
@@ -39,7 +40,8 @@
     // run().catch(console.dir);
 
     export default run;
+```
 
 ### fetch the data with the url of below >>
 
-         http://localhost:3000/api/news
+http://localhost:3000/api/news

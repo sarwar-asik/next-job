@@ -4,17 +4,25 @@
 
      install json-server >>>
 
-     npm i json-server
+    ``` npm i json-server```
 
      use in  package.json >>>
 
-     "json-server": "json-server --watch db.json --port 5000",
+```json
+     "json-server": "json-server --watch db.json --port 5000"
+```
 
      start server >>>
-     npm run json-server
+```cmd
+
+npm run json-server
+
+```
 
 #### fetch full data with getStaticProps
 
+ ```js
+ 
     export const getStaticProps = async () => {
         const res = await fetch("http://localhost:5000/news");
         const data = await res.json();
@@ -33,7 +41,11 @@
         const {id,name} = allNews
     }
 
+
+ ```
 ###### fetch full data with getServerSideProps
+
+```js
 
     export const getServerSideProps = async () => {
         const res = await fetch("http://localhost:5000/news");
@@ -47,9 +59,11 @@
             // revalidate: 30,
         };
     };
+```
 
 ### Fetch Dynamic data in pages>news>[newsId].js >>>
 
+```js
     export const getStaticPaths = async () => {
         const res = await fetch(`http://localhost:5000/news`);
         const newses = await res.json();
@@ -72,10 +86,13 @@
         };
     };
 
+```
 ##### Fetch Dynamic data in pages>news>[newsId].js >>>
 
      ** remove getStaticPath  ***
 
+
+```js
         export const getServerSideProps = async (context) => {
             const { params } = context;
 
@@ -87,3 +104,6 @@
                 },
             };
         };
+
+
+```

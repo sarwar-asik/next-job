@@ -6,6 +6,7 @@
 
 #### create src>redux>store.js
 
+ ```js
         import { configureStore } from "@reduxjs/toolkit";
         import { apiSlice } from "./api/api";
 
@@ -16,9 +17,11 @@
         middleware: getDefaultMiddleware =>
         getDefaultMiddleware().concat(apiSlice.middleware)
         });
+ ```
 
 #### src>src>\_app.js ::
 
+```js
     import store from '@/redux/store';
     import '@/styles/globals.css'
     import { Provider } from 'react-redux';
@@ -32,8 +35,10 @@
             </Provider>
         }
 
+```
 ### pages>redux>api>api.js :::
 
+```js
         import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
         export const apiSlice = createApi({
@@ -51,7 +56,11 @@
 
         export const { useGetNewsQuery } = apiSlice;
 
+```
+
 ### use for fetchData >>>>
 
+```js
     const {data} = useGetNewsQuery()
     console.log(data)
+```

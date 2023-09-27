@@ -1,5 +1,7 @@
 ## Lazy Loading for loading before show pages .
 
+```js
+
     const DynamicBanner = dynamic(() => import('@/components/UI/Banner'), {
         loading: () => <h2>Loading Banner...</h2>,
         ssr:false
@@ -18,3 +20,5 @@
         };
 
         export default index;
+
+```
